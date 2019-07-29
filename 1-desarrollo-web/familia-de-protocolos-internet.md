@@ -22,10 +22,9 @@ en la capa de red. TCP así como UDP (User Datagram Protocol) se utilizan para
 dividir un mensaje en varias partes y que estas puedan ser interpretadas por
 el receptor.
 
+[Referencia IBM](https://www.ibm.com/support/knowledgecenter/es/ssw_aix_72/network/tcpip_protocols.html)
+
 ### FTP
 
 "File Transfer Protocol" es otro protocolo de Capa Aplicación que se utiliza
 para la transferencia de archivos.
-
-
-(Referencia IBM)[https://www.ibm.com/support/knowledgecenter/es/ssw_aix_72/network/tcpip_protocols.html]
