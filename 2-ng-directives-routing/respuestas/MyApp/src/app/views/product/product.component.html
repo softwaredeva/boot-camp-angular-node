@@ -1,0 +1,25 @@
+<div class="productContainer">
+  <a mat-button routerLink="/">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    <span>Átrás</span>
+  </a>
+  <div class="productsWrapper">
+    <div class="productImages">
+      <div class="imageContainer">
+        <img [src]="product?.image" [alt]="product?.name">
+      </div>
+    </div>
+    <div class="productInfo">
+      <h1>{{product?.name}}</h1>
+      <h2>{{product?.cost | currency}}</h2>
+      <div class="addProduct">
+        <mat-form-field appearance="outline">
+          <input matInput type="number" [formControl]="addCountControl">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" [disabled]="!addCountControl.valid" (click)="addToCart()">AGREGAR AL CARRITO</button>
+      </div>
+      <p>{{product?.description}}</p>
+    </div>
+  </div>
+</div>

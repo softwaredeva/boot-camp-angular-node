@@ -1,0 +1,36 @@
+.productContainer{
+  padding: 2% 0;
+  .productsWrapper{
+    display: flex;
+    .productImages,.productInfo{
+      flex: 0 0 50%;
+      width: 50%;
+    }
+    .productImages{
+      padding: 2em;
+      border-right: 0.5px solid lightgray;
+      .imageContainer{
+        width: 100%;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .productInfo{
+      padding: 2em;
+      .addProduct{
+        display: flex;
+        align-items: center;
+        mat-form-field{
+          width: 62px;
+          margin-right: 1em;
+        }
+        button[mat-raised-button]{
+          height: 59px;
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+
+}
