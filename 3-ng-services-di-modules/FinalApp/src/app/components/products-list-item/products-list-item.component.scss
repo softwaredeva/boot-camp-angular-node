@@ -1,0 +1,41 @@
+.productContainer{
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+  button{
+    width: 100%;
+    background-color: #c8c8c8;
+    .buttonInner{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1em;
+
+      .imageContainer{
+        height: 4em;
+        width: auto;
+        img{
+          height: 100%;
+          width: auto;
+        }
+      }
+      h1{
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .priceContainer{
+        display: flex;
+        align-items: center;
+        h2{
+
+        }
+        mat-icon{
+
+        }
+      }
+    }
+  }
+}

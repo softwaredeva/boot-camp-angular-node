@@ -1,0 +1,39 @@
+.checkoutCartProductsContainer{
+  .productsListContainer{
+    padding: 5%;
+    .product{
+      display: flex;
+      align-items: center;
+      button{
+        margin-right: 1em;
+        .buttonInner{
+          display: flex;
+          align-items: center;
+          text-align: left;
+          width: 100%;
+          .imageContainer{
+            height: 10em;
+            margin-right: 1em;
+            img{
+              height: 100%;
+            }
+          }
+          .productInfo{
+            h4{
+              width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+      .productQuantity{
+        margin-right: 1em;
+        h2{
+          white-space: pre;
+        }
+      }
+    }
+  }
+}

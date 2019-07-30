@@ -1,0 +1,38 @@
+<div class="checkoutContainer">
+  <div class="checkoutCart">
+    <app-checkout-cart-products [products]="products"></app-checkout-cart-products>
+    <h2>Subtotal: <span>{{subTotal | currency}}</span></h2>
+    <h2>Envío: <span>{{deliveryCost | currency}}</span></h2>
+    <h2>Total: <span>{{totalCost | currency}}</span></h2>
+  </div>
+  <div class="checkoutform">
+    <form [formGroup]="checkoutForm">
+      <mat-form-field>
+        <input matInput placeholder="Nombre">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Correo">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Dirección">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Tarjeta">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Mes de expiración">
+          <mat-option [value]="month.value" *ngFor="let month of months">{{month.label}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Año de expiración">
+          <mat-option [value]="year.value" *ngFor="let year of years">{{year.label}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="CSV">
+      </mat-form-field>
+      <button mat-flat-button color="primary">¡Comprar!</button>
+    </form>
+  </div>
+</div>

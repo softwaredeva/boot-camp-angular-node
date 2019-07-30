@@ -1,0 +1,14 @@
+<div class="productContainer">
+  <button mat-button [routerLink]="['/producto',product?.id]">
+    <div class="buttonInner">
+      <div class="imageContainer">
+        <img [src]="product?.image" [alt]="product?.name">
+      </div>
+      <h1>{{product?.name}}</h1>
+      <div class="priceContainer">
+        <h2>{{product?.cost | currency}}</h2>
+        <mat-icon color="accent">arrow_right_alt</mat-icon>
+      </div>
+    </div>
+  </button>
+</div>

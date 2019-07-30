@@ -1,0 +1,6 @@
+<div class="checkoutCartContainer">
+  <h1>Carrito</h1>
+  <app-checkout-cart-products [products]="products"></app-checkout-cart-products>
+  <h2>Total: <span>{{total | currency}}</span></h2>
+  <button mat-flat-button color="primary" routerLink="/pedido" [disabled]="!products?.length">¡Comprar!</button>
+</div>

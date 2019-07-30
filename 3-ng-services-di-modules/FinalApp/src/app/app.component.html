@@ -1,0 +1,39 @@
+<div class="appContainer" [class.appIsMobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="appToolbar">
+    <a mat-button routerLink="/">
+      <div class="logoContainer">
+        <img src="/assets/logo.png" alt="Logo">
+        <h1>Tienda en linea</h1>
+      </div>
+    </a>
+    <mat-form-field (click)="snav.close()" [ngClass]="{'focused':searchOpen}">
+      <input type="search" matInput placeholder="Buscar producto"
+      (focus)="searchOpen = true"
+      [formControl]="searchFormControl">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>shopping_cart</mat-icon></button>
+  </mat-toolbar>
+  <mat-sidenav-container class="appSidenavContainer">
+    <mat-sidenav #snav mode="over" position="end"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <app-checkout-cart [products]="checkoutProducts"></app-checkout-cart>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="searchResults" *ngIf="searchOpen">
+        <h3 *ngIf="isSearching">Buscando...</h3>
+        <h3 *ngIf="!isSearching && searchComplete && !searchResults?.length">Sin resultados</h3>
+        <mat-nav-list *ngIf="!isSearching && searchComplete && searchResults?.length">
+          <a mat-list-item (click)="searchBlur()" [routerLink]="['/producto',result?.id]" *ngFor="let result of searchResults">
+            <img [src]="result.image" [alt]="result.name">
+            <h3>{{result.name}}</h3>
+            <mat-icon>arrow_right_alt</mat-icon>
+          </a>
+        </mat-nav-list>
+        <div class="backdrop" (click)="searchBlur()"></div>
+      </div>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

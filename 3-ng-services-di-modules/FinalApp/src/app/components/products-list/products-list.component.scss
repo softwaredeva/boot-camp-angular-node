@@ -1,0 +1,8 @@
+.productsListContainer{
+  display: flex;
+  flex-wrap: wrap;
+  app-products-list-item{
+    flex: 0 1 25%;
+    width: 25%;
+  }
+}
