@@ -1,26 +1,20 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+### Respuesta
+
+Agregar o modificar los siguientes códigos y archivos al proyecto:
+
+```
+services/products.service
+
+
+...
+import { HttpClient } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
-export interface Product{
-  id: string;
-  name: string;
-  cost: number;
-  image: string;
-  description?: string;
-}
-
-@Injectable({
-  providedIn: 'root'
-})
+...
 export class ProductsService {
   private productsUrl = 'api/products';  // URL to web api
-
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
 
   constructor(
     private httpClient: HttpClient,
@@ -32,18 +26,6 @@ export class ProductsService {
         tap(_ => this.log('fetched products')),
         catchError(this.handleError<Product[]>('getProducts', []))
       );
-  }
-
-
-  searchProducts(term: string): Observable<Product[]> {
-    if (!term.trim()) {
-      // if not search term, return empty hero array.
-      return of([]);
-    }
-    return this.httpClient.get<Product[]>(`${this.productsUrl}/?name=${term}`).pipe(
-      tap(_ => this.log(`found products matching "${term}"`)),
-      catchError(this.handleError<Product[]>('searchProducts', []))
-    );
   }
 
   getProduct(id: string): Observable<Product> {
@@ -67,3 +49,31 @@ export class ProductsService {
     console.log("log",message);
   }
 }
+```
+
+
+```
+views/home/home.component
+
+
+...
+ngOnInit() {
+  this.productsService.getProducts().subscribe((products:Product[])=>{
+    this.products = products;
+  });
+}
+```
+
+```
+views/product/product.component
+
+
+...
+getProduct(){
+  this.productsService.getProduct(this.productId).subscribe(data=>{
+    console.log("getProduct",data);
+    if(data)
+    this.product = data;
+  });
+}
+```

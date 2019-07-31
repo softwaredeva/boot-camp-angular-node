@@ -4,8 +4,10 @@
     .product{
       display: flex;
       align-items: center;
+      justify-content: space-between;
       button{
         margin-right: 1em;
+        width: 100%;
         .buttonInner{
           display: flex;
           align-items: center;

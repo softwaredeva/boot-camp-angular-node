@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 
 import { debounceTime, distinctUntilChanged,tap, filter }from 'rxjs/operators';
 
-import { Product } from './views/Product';
+import { Product } from './interfaces//Product';
 
 @Component({
   selector: 'app-root',
@@ -26,19 +26,6 @@ export class AppComponent implements OnDestroy {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-
-    this.searchFormControl.valueChanges.pipe(
-      filter(value=>!!value),
-      debounceTime(300),
-      distinctUntilChanged(),
-      tap(()=>{this.isSearching = true;this.searchComplete = false;}),
-    ).subscribe(value=>{
-      console.log("searchFormControl value",value);
-      // TODO: buscar en productos y filtrar resultados
-      // this.searchResults = results;
-      this.isSearching = false;
-      this.searchComplete = true;
-    });
   }
 
   searchBlur(){

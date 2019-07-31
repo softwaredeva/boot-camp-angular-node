@@ -8,8 +8,7 @@ import { CheckoutProduct } from '../../services/checkout.service';
   styleUrls: ['./checkout-cart-products.component.scss']
 })
 export class CheckoutCartProductsComponent implements OnInit {
-  @Input() products: CheckoutProduct;
-  productsCount: number = 0;
+  @Input() products: CheckoutProduct[];
 
   constructor() { }
 

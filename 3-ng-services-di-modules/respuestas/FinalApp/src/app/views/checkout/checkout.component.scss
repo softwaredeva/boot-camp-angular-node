@@ -1,0 +1,16 @@
+.checkoutContainer{
+  display: flex;
+  padding: 5%;
+  .checkoutCart,.checkoutform{
+    flex: 0 1 45%;
+  }
+  .checkoutCart{
+    margin-right: 10%;
+  }
+  .checkoutform{
+    form{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

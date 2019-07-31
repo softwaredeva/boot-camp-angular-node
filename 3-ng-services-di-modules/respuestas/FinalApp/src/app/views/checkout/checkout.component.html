@@ -6,33 +6,33 @@
     <h2>Total: <span>{{totalCost | currency}}</span></h2>
   </div>
   <div class="checkoutform">
-    <form [formGroup]="checkoutForm">
+    <form [formGroup]="checkoutForm" (ngSubmit)="sendCheckout()">
       <mat-form-field>
-        <input matInput placeholder="Nombre">
+        <input matInput placeholder="Nombre" formControlName="name">
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Correo">
+        <input matInput placeholder="Correo" formControlName="email">
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Dirección">
+        <input matInput placeholder="Dirección" formControlName="address">
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Tarjeta">
+        <input matInput placeholder="Tarjeta" formControlName="card">
       </mat-form-field>
       <mat-form-field>
-        <mat-select placeholder="Mes de expiración">
+        <mat-select placeholder="Mes de expiración" formControlName="expirationMonth">
           <mat-option [value]="month.value" *ngFor="let month of months">{{month.label}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
-        <mat-select placeholder="Año de expiración">
+        <mat-select placeholder="Año de expiración" formControlName="expirationYear">
           <mat-option [value]="year.value" *ngFor="let year of years">{{year.label}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="CSV">
+        <input matInput placeholder="CSV" formControlName="csv">
       </mat-form-field>
-      <button mat-flat-button color="primary">¡Comprar!</button>
+      <button mat-flat-button type="submit" color="primary">¡Comprar!</button>
     </form>
   </div>
 </div>

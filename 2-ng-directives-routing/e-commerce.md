@@ -172,22 +172,7 @@ export class AppComponent implements OnDestroy {
   searchComplete: boolean;
   searchOpen: boolean = false;
 
-  constructor(
-    ...
-
-    this.searchFormControl.valueChanges.pipe(
-      filter(value=>!!value),
-      debounceTime(300),
-      distinctUntilChanged(),
-      tap(()=>{this.isSearching = true;this.searchComplete = false;}),
-    ).subscribe(value=>{
-      console.log("searchFormControl value",value);
-      // TODO: buscar en productos y filtrar resultados
-      // this.searchResults = results;
-      this.isSearching = false;
-      this.searchComplete = true;
-    });
-  }
+  ...
 
   searchBlur(){
     this.searchOpen = false;
@@ -203,7 +188,7 @@ app.component.html
 ...
 </a>
 <mat-form-field (click)="snav.close()" [ngClass]="{'focused': searchOpen}">
-  <input type="search" matInput placeholder="Buscar producto"
+  <input type="search" matInput autocomplete="off" placeholder="Buscar producto"
   (focus)="searchOpen = true"
   [formControl]="searchFormControl">
   <mat-icon matSuffix>search</mat-icon>
@@ -303,13 +288,18 @@ export class ProductComponent implements OnInit {
 ) { }
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe((params:Params)=>{
-      console.log("params",params);
-      if(params.id){
-        this.productId = params.id;
-        this.getProduct();
-      }
-    });
+    let params: Params = this.activatedRoute.snapshot.params;
+    if(params.id){
+      this.productId = params.id;
+      this.getProduct();
+    }
+    // this.activatedRoute.params.subscribe((params:Params)=>{
+    //   console.log("params",params);
+    //   if(params.id){
+    //     this.productId = params.id;
+    //     this.getProduct();
+    //   }
+    // });
   }
 
   getProduct(){

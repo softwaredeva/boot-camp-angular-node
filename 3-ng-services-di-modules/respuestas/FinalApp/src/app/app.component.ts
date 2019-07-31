@@ -1,6 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatSidenav } from '@angular/material';
 
 import { debounceTime, distinctUntilChanged, switchMap,tap, filter }from 'rxjs/operators';
 
@@ -13,6 +14,8 @@ import { ProductsService, Product } from './services/products.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy {
+  @ViewChild('snav',{static:false}) sidenav: MatSidenav;
+
   mobileQuery: MediaQueryList;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
@@ -41,11 +44,7 @@ export class AppComponent implements OnDestroy {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
-    this.checkoutService.productsObservable.subscribe((checkoutProducts:CheckoutProduct[])=>{
-      console.log("productsObservable",checkoutProducts);
-      if(checkoutProducts)
-      this.checkoutProducts = checkoutProducts;
-    });
+
     this.searchFormControl.valueChanges.pipe(
       filter(value=>!!value),
       debounceTime(300),
@@ -57,6 +56,15 @@ export class AppComponent implements OnDestroy {
       this.isSearching = false;
       this.searchComplete = true;
     });
+
+    this.checkoutService.productsObservable.subscribe((checkoutProducts:CheckoutProduct[])=>{
+      if(checkoutProducts)
+      this.checkoutProducts = Object.assign([],checkoutProducts);
+    });
+  }
+
+  ngAfterViewInit(){
+    this.checkoutService.matSidenav = this.sidenav;
   }
 
   searchBlur(){
@@ -69,6 +77,4 @@ export class AppComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
-
-  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 }

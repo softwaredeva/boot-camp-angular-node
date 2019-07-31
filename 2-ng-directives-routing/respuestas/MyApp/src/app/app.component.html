@@ -7,7 +7,7 @@
       </div>
     </a>
     <mat-form-field (click)="snav.close()" [ngClass]="{'focused': searchOpen}">
-      <input type="search" matInput placeholder="Buscar producto"
+      <input type="search" matInput autocomplete="off" placeholder="Buscar producto"
       (focus)="searchOpen = true"
       [formControl]="searchFormControl">
       <mat-icon matSuffix>search</mat-icon>
@@ -35,7 +35,7 @@
       </div>
 
       <router-outlet></router-outlet>
-      
+
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

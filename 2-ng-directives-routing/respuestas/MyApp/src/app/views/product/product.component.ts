@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 
-import {  Product } from '../Product';
+import {  Product } from '../../interfaces/Product';
 
-import { PRODUCTS } from '../products';
+import { PRODUCTS } from '../../interfaces/products';
 
 @Component({
   selector: 'app-product',
@@ -15,19 +14,23 @@ export class ProductComponent implements OnInit {
   productId: string;
   product: Product;
 
-  addCountControl: FormControl = new FormControl(0,[Validators.required,Validators.min(1)]);
   constructor(
     private activatedRoute: ActivatedRoute,
 ) { }
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe((params:Params)=>{
-      console.log("params",params);
-      if(params.id){
-        this.productId = params.id;
-        this.getProduct();
-      }
-    });
+    let params: Params = this.activatedRoute.snapshot.params;
+    if(params.id){
+      this.productId = params.id;
+      this.getProduct();
+    }
+    // this.activatedRoute.params.subscribe((params:Params)=>{
+    //   console.log("params",params);
+    //   if(params.id){
+    //     this.productId = params.id;
+    //     this.getProduct();
+    //   }
+    // });
   }
 
   getProduct(){
@@ -35,7 +38,7 @@ export class ProductComponent implements OnInit {
   }
 
   addToCart(){
-    console.log("addToCart",this.product,this.addCountControl.value);
+    console.log("addToCart",this.product);
   }
 
 }

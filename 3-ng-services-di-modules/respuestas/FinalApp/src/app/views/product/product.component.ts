@@ -23,7 +23,6 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params:Params)=>{
-      console.log("params",params);
       if(params.id){
         this.productId = params.id;
         this.getProduct();
@@ -33,14 +32,12 @@ export class ProductComponent implements OnInit {
 
   getProduct(){
     this.productsService.getProduct(this.productId).subscribe(data=>{
-      console.log("getProduct",data);
       if(data)
       this.product = data;
-    })
+    });
   }
 
   addToCart(){
-    console.log("addToCart");
     this.checkoutService.addToCart(this.product,this.addCountControl.value);
   }
 

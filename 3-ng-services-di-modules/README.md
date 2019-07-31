@@ -2,15 +2,16 @@
 
 ### Temas
 
-* Services [->](./services.md)
-* Dependency Injection [->](./dependency-injection.md)
-
 * Observables [->](./observables.md)
+* Services [->](./services.md)
 * HttpClient [->](./http-client.md)
 
-* NgModules [->](./ng-modules.md)
+* ReactiveForms [->](.reactive-forms.md)
+
+* e-commerce [->](.e-commerce.md)
+
 * CLI build [->](./cli-build.md)
-* Extras: [->](./extras.md)
+* Extras:
   * Animations
   * Custom directives & pipes
 

@@ -14,10 +14,10 @@
       <h2>{{product?.cost | currency}}</h2>
       <div class="addProduct">
         <mat-form-field appearance="outline">
-          <input matInput type="number" [formControl]="addCountControl">
+          <input matInput type="number">
         </mat-form-field>
 
-        <button mat-raised-button color="primary" [disabled]="!addCountControl.valid" (click)="addToCart()">AGREGAR AL CARRITO</button>
+        <button mat-raised-button color="primary" (click)="addToCart()">AGREGAR AL CARRITO</button>
       </div>
       <p>{{product?.description}}</p>
     </div>
