@@ -28,6 +28,10 @@ export class ProductComponent implements OnInit {
         this.getProduct();
       }
     });
+    this.addCountControl.valueChanges.subscribe(value=>{
+      if(parseInt(value)<0)
+      this.addCountControl.setValue(0);
+    });
   }
 
   getProduct(){

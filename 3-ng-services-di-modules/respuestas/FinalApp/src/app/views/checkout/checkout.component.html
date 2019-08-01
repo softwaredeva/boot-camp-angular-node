@@ -32,7 +32,7 @@
       <mat-form-field>
         <input matInput placeholder="CSV" formControlName="csv">
       </mat-form-field>
-      <button mat-flat-button type="submit" color="primary">¡Comprar!</button>
+      <button mat-flat-button type="submit" color="primary"  [disabled]="!checkoutForm.valid">¡Comprar!</button>
     </form>
   </div>
 </div>
