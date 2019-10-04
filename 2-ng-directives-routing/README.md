@@ -1,11 +1,10 @@
-## Angular
+# Angular
 
-### Temas
+## Temas
 
 * Angular CLI [->](./angular-cli.md)
 * Angular material [->](./angular-material.md)
 * Typescript [->](./typescript.md)
-
 
 * Data binding [->](./data-binding.md)
 * Ng Built-in directives & pipes [->](./ng-built-in-directives-pipes.md)
@@ -17,7 +16,7 @@
 
 * E-commerce [->](./e-commerce.md)
 
-### Objetivo
+## Objetivo
 
 Crear dos pantallas funcionales con información estática.
 

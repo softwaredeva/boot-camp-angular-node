@@ -1,4 +1,6 @@
-## Pasos:
+# 2 Ejecutar js que modifique una página en consola
+
+## Pasos
 
 * Abrir cualquier explorador web en cualquier página
 * Abrir menú de desarrollador
@@ -6,7 +8,7 @@
 * Seleccionar "Consola"
 * En la linea de entrada de comandos ">" ingresar código js
 
-```
+```js
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/prototype
 
 var DOMmods = function() {
@@ -26,3 +28,5 @@ let myDOMmods = new DOMmods();
 
 myDOMmods.deleteChild(4);
 ```
+
+[<--](../../web-broswer-js-basico.md)

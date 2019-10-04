@@ -1,9 +1,9 @@
-## Web Browser y Javascript Básico
+# Web Browser y Javascript Básico
 
 Navegadores comunes: Google Chrome, Explorer, Safari, Mozilla Firefox, Opera,
 etc.
 
-### Chromium-base
+## Chromium-base
 
 "Chromium es el proyecto de código abierto de navegador web del que Google
 Chrome obtiene su código fuente."
@@ -16,7 +16,7 @@ Chrome obtiene su código fuente."
 * Brisc
 * etc.
 
-### Mozilla
+## Mozilla
 
 Motor Gecko, libre y de código abierto.
 
@@ -27,8 +27,7 @@ En su página podemos encontrar la referencia de HTML, CSS, javascript, etc.
 mejor definida:
 [developer.mozilla.org](https://developer.mozilla.org/es/docs/Web).
 
-
-### HTML y CSS
+## HTML y CSS
 
 Todo explorador moderno implementa un renderizador de páginas web las cuales se
 definen en dos partes, una su estructura con un lenguaje de marcado "HTML
@@ -37,7 +36,7 @@ definen en dos partes, una su estructura con un lenguaje de marcado "HTML
 
 [Referencia w3c](https://www.w3.org/standards/webdesign/htmlcss)
 
-### ECMAscript (Javascript)
+## ECMAscript (Javascript)
 
 ECMAscript mejor conocido como "javascript" es desarrollado por
 [ECMA](http://www.ecma-international.org) y es un API de "scripting" para
@@ -50,37 +49,44 @@ puede ser cargado de un servidor y a esto se le llama AJAX (Asynchronous
 
 [Referencia w3c](https://www.w3.org/standards/webdesign/script.html)
 
-### Javascript básico
+## Javascript básico
 
-#### Actividades
+### Actividades
 
-##### 1.- Ejecutar js en consola
+#### 1.- Ejecutar js en consola
+
 Crear un código inservible donde se utilice while, for, arreglos
 (push & filter), Math, operadores y condiciones y correrlo en la consola de
 cualquier página.
 
 [ver respuesta ->](./answers/js-basic/1-js-basic.md)
 
-##### 2.- Ejecuar js que modifique una página en consola
+#### 2.- Ejecuar js que modifique una página en consola
+
 Crear un código que modifique o elimine elementos del HTML o CSS de cualquier
 página.
 
 [ver respuesta ->](./answers/js-basic/2-js-basic.md)
 
-##### 3.- Correr js al cargar una página
+#### 3.- Correr js al cargar una página
+
 Crear una página (solo HTML) donde cargue un contenido o estilo usando un código javascript dependiendo el ancho de la pantalla
 
-[ver respuesta ->](./answers/js-basic/3-js-basic.md)
+[ver respuesta ->](./answers/js-basic/3-js-basic/README.md)
 
-##### 4.- Correr js al interactuar con una página
+#### 4.- Correr js al interactuar con una página
+
 Crear una página (solo HTML) donde se tenga algún elemento con el cuál el
 usuario puede interactuar con un elemento y cambiar la página.
 
-[ver respuesta ->](./answers/js-basic/3-js-basic.md)
+[ver respuesta ->](./answers/js-basic/4-js-basic/README.md)
 
-##### 5.- Correr js desde un archivo
+#### 5.- Correr js desde un archivo
+
 Crear una página (solo HTML) donde se cargue un archivo javascript y que tenga
  algún elemento con el cuál el usuario puede interactuar con un elemento y
  cambiar la página.
 
-[ver respuesta ->](./answers/js-basic/3-js-basic.md)
+[ver respuesta ->](./answers/js-basic/5-js-basic/README.md)
+
+[<- README](./README.md)

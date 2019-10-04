@@ -1,8 +1,8 @@
-## Familia de protocolos de internet
+# Familia de protocolos de internet
 
 ![Protocolos](./imgs/Suite_de_Protocolos_TCPIP.png)
 
-### HTTP
+## HTTP
 
 **"HyperText Transfer Protocol"** define el formato y la forma de transmitir
 los mensajes dentro de la **"World Wide Web"**. El protocolo es **"stateless"**
@@ -13,7 +13,7 @@ comando. (505, 502, 200, etc.)
 
 [Referencia Webopedia](https://www.webopedia.com/TERM/W/World_Wide_Web.html)
 
-### TCP / IP
+## TCP / IP
 
 Usando en 1970 en ARPANET (primera WAN), son las normas que permiten a los
 dispositivos intercambiar información en una red. TCP (Transmission control
@@ -24,7 +24,9 @@ el receptor.
 
 [Referencia IBM](https://www.ibm.com/support/knowledgecenter/es/ssw_aix_72/network/tcpip_protocols.html)
 
-### FTP
+## FTP
 
 "File Transfer Protocol" es otro protocolo de Capa Aplicación que se utiliza
 para la transferencia de archivos.
+
+[<- README](./README.md)

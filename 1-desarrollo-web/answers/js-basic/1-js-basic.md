@@ -1,4 +1,6 @@
-## Pasos:
+# 1 Ejecutar js en consola
+
+## Pasos
 
 * Abrir cualquier explorador web en cualquier página
 * Abrir menú de desarrollador
@@ -6,7 +8,7 @@
 * Seleccionar "Consola"
 * En la linea de entrada de comandos ">" ingresar código js
 
-```
+```js
 // Retorna un entero aleatorio entre min (incluido) y max (excluido)
 // ¡Usando Math.round() te dará una distribución no-uniforme!
 function getRandomInt(min, max) {
@@ -40,3 +42,5 @@ console.log("arr3",arr3);
 
 // https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/randoms
 ```
+
+[<--](../../web-broswer-js-basico.md)
