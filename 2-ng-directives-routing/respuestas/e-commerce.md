@@ -1,9 +1,11 @@
-### Respuesta
+# E-commerce
+
+## Respuesta
 
 Agregar o modificar los siguientes códigos y archivos al proyecto:
 
-```
-app.component.ts
+```ts
+// app.component.ts
 
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
@@ -48,8 +50,8 @@ export class AppComponent implements OnDestroy {
 }
 ```
 
-```
-app.component.html
+```html
+<!-- app.component.html -->
 
 <div class="appContainer" [class.appIsMobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="appToolbar">
@@ -95,8 +97,8 @@ app.component.html
 
 ```
 
-```
-app.component.scss
+```scss
+// app.component.scss
 
 .appContainer{
   display: flex;
@@ -176,8 +178,8 @@ app.component.scss
 }
 ```
 
-```
-app.module.ts
+```ts
+// app.module.ts
 
 ...
 import { ReactiveFormsModule } from '@angular/forms';
@@ -208,9 +210,8 @@ import {
 export class AppModule { }
 ```
 
-
-```
-views/product/product.component.ts
+```ts
+// views/product/product.component.ts
 
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
@@ -252,8 +253,8 @@ export class ProductComponent implements OnInit {
 }
 ```
 
-```
-views/product/product.component.html
+```html
+<!-- views/product/product.component.html -->
 
 <div class="productContainer">
   <a mat-button routerLink="/">
@@ -282,8 +283,10 @@ views/product/product.component.html
 </div>
 
 ```
-```
-views/product/product.component.scss
+
+```scss
+// views/product/product.component.scss
+
 .productContainer{
   padding: 2% 0;
   .productsWrapper{
@@ -321,3 +324,5 @@ views/product/product.component.scss
 
 }
 ```
+
+[<--](../e-commerce.md)

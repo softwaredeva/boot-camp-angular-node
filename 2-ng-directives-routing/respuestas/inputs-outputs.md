@@ -1,17 +1,17 @@
-### Respuesta
+# Inputs & Outputs
+
+## Respuesta
 
 Agregar o modificar los siguientes códigos y archivos al proyecto:
 
-
-```
-app.component.html
+```html
+<!-- app.component.html -->
 
 <app-products-list [products]="products"></app-products-list>
 ```
 
-
-```
-components/products-list/products-list.component.ts
+```ts
+// components/products-list/products-list.component.ts
 
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../../product';
@@ -23,3 +23,5 @@ export class ProductsListComponent implements OnInit {
   ...
 }
 ```
+
+[<--](../inputs-outputs.md)

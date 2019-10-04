@@ -19,7 +19,7 @@ export class AppComponent implements OnDestroy {
   searchResults: Product[];
   isSearching: boolean;
   searchComplete: boolean;
-  searchOpen: boolean = false;
+  searchOpen = false;
   constructor(
     changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,
   ) {
@@ -28,7 +28,7 @@ export class AppComponent implements OnDestroy {
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
-  searchBlur(){
+  searchBlur() {
     this.searchOpen = false;
     this.searchFormControl.setValue('');
     this.searchComplete = false;

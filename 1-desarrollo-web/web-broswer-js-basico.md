@@ -59,27 +59,27 @@ Crear un código inservible donde se utilice while, for, arreglos
 (push & filter), Math, operadores y condiciones y correrlo en la consola de
 cualquier página.
 
-[ver respuesta ->](./answers/js-basic/1-js-basic.md)
+[ver respuesta ->](./respuestas/js-basic/1-js-basic.md)
 
 #### 2.- Ejecuar js que modifique una página en consola
 
 Crear un código que modifique o elimine elementos del HTML o CSS de cualquier
 página.
 
-[ver respuesta ->](./answers/js-basic/2-js-basic.md)
+[ver respuesta ->](./respuestas/js-basic/2-js-basic.md)
 
 #### 3.- Correr js al cargar una página
 
 Crear una página (solo HTML) donde cargue un contenido o estilo usando un código javascript dependiendo el ancho de la pantalla
 
-[ver respuesta ->](./answers/js-basic/3-js-basic/README.md)
+[ver respuesta ->](./respuestas/js-basic/3-js-basic/README.md)
 
 #### 4.- Correr js al interactuar con una página
 
 Crear una página (solo HTML) donde se tenga algún elemento con el cuál el
 usuario puede interactuar con un elemento y cambiar la página.
 
-[ver respuesta ->](./answers/js-basic/4-js-basic/README.md)
+[ver respuesta ->](./respuestas/js-basic/4-js-basic/README.md)
 
 #### 5.- Correr js desde un archivo
 
@@ -87,6 +87,6 @@ Crear una página (solo HTML) donde se cargue un archivo javascript y que tenga
  algún elemento con el cuál el usuario puede interactuar con un elemento y
  cambiar la página.
 
-[ver respuesta ->](./answers/js-basic/5-js-basic/README.md)
+[ver respuesta ->](./respuestas/js-basic/5-js-basic/README.md)
 
 [<- README](./README.md)

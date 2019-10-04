@@ -1,14 +1,15 @@
-## E-commerce
+# E-commerce
 
 Nuestro proyecto consiste en un mini e-commerce, para esto deberemos mejorar nuestra página para que se mas amigable con el usuario
 Para esto seguiremos las siguientes actividades o retos.
 
-#### Actividad
+## Actividad
 
 1.- Agregar un "toolbar" y un "sidenav" de la libería "material" dentro de un div, con el siguiente estilo.
 
-```
-app.module.ts
+```ts
+// app.module.ts
+
 import { ReactiveFormsModule } from '@angular/forms';
 
 import {
@@ -32,7 +33,7 @@ imports: [
 ...
 
 
-app.component.ts
+// app.component.ts
 
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
@@ -53,8 +54,10 @@ export class AppComponent implements OnDestroy {
   }
 }  
 
+```
 
-app.component.html
+```html
+<!-- app.component.html -->
 
 <div class="appContainer" [class.appIsMobile]="mobileQuery.matches">
 <mat-toolbar color="primary" class="appToolbar">
@@ -71,8 +74,10 @@ app.component.html
 </mat-sidenav-container>
 </div>
 
+```
 
-app.component.scss
+```scss
+// app.component.scss
 
 .appContainer{
   display: flex;
@@ -98,12 +103,10 @@ app.component.scss
 }
 ```
 
-
-
 2.- Agregar a la "toolbar" un botón con una imagen de un logo y un título y un botón para abrir el menú lateral
 
-```
-app.component.html
+```html
+<!-- app.component.html -->
 ...
 <mat-toolbar color="primary" class="appToolbar">
   <a mat-button routerLink="/">
@@ -116,9 +119,10 @@ app.component.html
 
 </mat-toolbar>
 ...
+```
 
-
-app.component.scss
+```scss
+// app.component.scss
 
 ...
 right: 0;
@@ -148,11 +152,10 @@ right: 0;
 ...
 ```
 
-
 3.- Agregar dentro de la "toolbar" un "Formfield" el cuál deberá mostrar una lista de resultados de búsqueda en caso de que el usuario ingrese un valor
 
-```
-app.component.ts
+```ts
+// app.component.ts
 
 ...
 import { FormControl } from '@angular/forms';
@@ -181,9 +184,10 @@ export class AppComponent implements OnDestroy {
     this.isSearching = false;
   }
 
+```
 
-
-app.component.html
+```html
+<!-- app.component.html -->
 
 ...
 </a>
@@ -215,8 +219,10 @@ app.component.html
   <router-outlet></router-outlet>
 ...
 
+```
 
-app.component.scss
+```scss
+// app.component.scss
 
 .appToolbar{
   ...
@@ -262,11 +268,12 @@ app.component.scss
 ```
 
 4.- En la pantalla de "Product" agregaremos lo necesario para:
+
 * Leer el id de la ruta
 * Buscar el producto con este id y mostrarlo al usuario
 
-```
-views/product/product.component.ts
+```ts
+// views/product/product.component.ts
 
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
@@ -307,8 +314,10 @@ export class ProductComponent implements OnInit {
   }
 }
 
+```
 
-views/product/product.component.html
+```html
+<!-- views/product/product.component.html -->
 
 <div class="productContainer">
   <a mat-button>
@@ -336,8 +345,11 @@ views/product/product.component.html
   </div>
 </div>
 
+```
 
-views/product/product.component.scss
+```scss
+// views/product/product.component.scss
+
 .productContainer{
   padding: 2% 0;
   .productsWrapper{
@@ -377,3 +389,5 @@ views/product/product.component.scss
 ```
 
 [Respuesta](./respuestas/e-commerce.md)
+
+[<--](./README.md)

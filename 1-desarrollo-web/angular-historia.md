@@ -49,6 +49,6 @@ Referencias:
 
 Correr un o dos ejemplos de la página de [angularJS](https://angularjs.org).
 
-[ver respuesta ->](./answers/angular-history)
+[ver respuesta ->](./respuestas/angular-history)
 
 [<- README](./README.md)

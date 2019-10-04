@@ -1,9 +1,11 @@
-### Respuesta
+# Ng Built-in directives & pipes
+
+## Respuesta
 
 Agregar o modificar los siguientes códigos y archivos al proyecto:
 
-```
-app.component.html
+```html
+<!-- app.component.html -->
 
 
 <div class="productsListContainer">
@@ -22,8 +24,8 @@ app.component.html
 </div>
 ```
 
-```
-app.component.ts
+```ts
+// app.component.ts
 
 ...
 import { PRODUCTS } from '.products';
@@ -34,8 +36,8 @@ export class AppComponent implements OnDestroy {
 }
 ```
 
-```
-products.ts
+```ts
+// products.ts
 
 import { Product } from './Product';
 
@@ -51,8 +53,8 @@ export const PRODUCTS: Product[] = [
 
 ```
 
-```
-app.module.ts
+```ts
+// app.module.ts
 
 import { ..., MatButtonModule } from '@angular/material';
 
@@ -65,3 +67,5 @@ import { ..., MatButtonModule } from '@angular/material';
 })
 export class AppModule { }
 ```
+
+[<--](../ng-built-in-directives-pipes.md)

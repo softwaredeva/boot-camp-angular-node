@@ -1,21 +1,23 @@
-### Respuesta
+# Components
+
+## Respuesta
 
 Agregar o modificar los siguientes códigos y archivos al proyecto:
 
-```
-app.component.html
+```html
+<!-- app.component.html -->
 
 <app-products-list></app-products-list>
 ```
 
-```
-app.component.scss
+```scss
+<!-- app.component.scss -->
 
 
 ```
 
-```
-app.module.ts
+```ts
+// app.module.ts
 
 import { ProductsListComponent } from './components/products-list/products-list.component';
 
@@ -28,8 +30,8 @@ import { ProductsListComponent } from './components/products-list/products-list.
 export class AppModule { }
 ```
 
-```
-components/products-list/products-list.component.ts
+```ts
+// components/products-list/products-list.component.ts
 
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../product';
@@ -51,8 +53,8 @@ export class ProductsListComponent implements OnInit {
 }
 ```
 
-```
-components/products-list/products-list.component.html
+```html
+<!-- components/products-list/products-list.component.html -->
 
 
 <div class="productsListContainer">
@@ -73,8 +75,8 @@ components/products-list/products-list.component.html
 </div>
 ```
 
-```
-components/products-list/products-list.component.scss
+```scss
+// components/products-list/products-list.component.scss
 
 .productsListContainer{
   display: flex;
@@ -119,3 +121,5 @@ components/products-list/products-list.component.scss
 
 }
 ```
+
+[<--](../components.md)

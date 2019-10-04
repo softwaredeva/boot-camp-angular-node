@@ -1,6 +1,6 @@
-## Angular
+# Angular
 
-### Temas
+## Temas
 
 * Observables [->](./observables.md)
 * Services [->](./services.md)
@@ -15,7 +15,7 @@
   * Animations
   * Custom directives & pipes
 
-### Objetivo
+## Objetivo
 
 Crear dos pantallas funcionales con información estática.
 
@@ -24,3 +24,5 @@ Pantalla 2: Carrito - se debe mostrar un menú lateral donde se muestre una list
 Pantalla 3: Checkout: - se mostrará el carrito así como el costo de envío y el total final, deberá tener una forma para llenar la información del usuario, al realizar la compra deberá mostrar un mensaje de confirmación.
 
 ![Pantalla 2 & 3](./E-commerce-design.png)
+
+[<- README](../README.md)

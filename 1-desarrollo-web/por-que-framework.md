@@ -28,6 +28,6 @@ De la carpeta de actividades tomar el proyecto "why-framework" y agregar
 "bootstrap" como se indica en su página
 [Pagina oficial ->](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 
-[ver respuesta ->](./answers/why-framework)
+[ver respuesta ->](./respuestas/why-framework)
 
 [<- README](./README.md)

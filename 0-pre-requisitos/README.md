@@ -1,8 +1,10 @@
-## BootCamp Angular y NodeJS
-### Prerequisitos:
+# BootCamp Angular y NodeJS
+
+## Prerequisitos
+
 Es recomendable que los asistentes tengan conocimientos básicos de programación, así como nociones de desarrollo web. A continuación una lista de los temas de conocimiento esperados (nivel básico):
 
-#### Conocimientos:
+### Conocimientos
 
 * HTML & CSS [APRENDER ->](https://www.w3schools.com)
 * Javascript (browser) [APRENDER ->](https://www.w3schools.com/js/default.asp)
@@ -13,7 +15,7 @@ Es recomendable que los asistentes tengan conocimientos básicos de programació
 [APRENDER 2 ->](https://www.tutorialspoint.com/website_development/index.htm)
 [APRENDER 3 ->](https://www.tutorialspoint.com/academic_tutorials.htm)
 
-#### Herramientas y programas:
+### Herramientas y programas
 
  Es recomendable que los siguientes programas se tengan instalados previamente
 
@@ -23,3 +25,5 @@ Es recomendable que los asistentes tengan conocimientos básicos de programació
 * [NodeJS](https://nodejs.org/en/) + [NPM](https://www.npmjs.com/get-npm) ó [NVM](https://github.com/nvm-sh/nvm)
 * Inspector Web (Chrome, Firefox, Safari, Oper, etc.) [APRENDER ->](https://developer.mozilla.org/es/docs/Tools/Page_Inspector)
 * [AngularCLI](https://angular.io/guide/setup-local#step-1-install-the-angular-cli)
+
+[<- README](../README.md)

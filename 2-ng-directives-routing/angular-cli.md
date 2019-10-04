@@ -1,20 +1,20 @@
-## Angular CLI
+# Angular CLI
 
 Para instalar la "CLI" de angular se requiere tener instalado nodejs y npm.
 
-```
+```sh
 npm i -g @angular/cli
 ```
 
 Para crear un nuevo proyecto utilizamos el siguiente comando
 
-```
+```sh
 ng new my-app
 ```
 
 Si queremos ver las opciones que tenemos para crear el proyecto usamos "--help"
 
-```
+```sh
 $ ng new my-app --help
 arguments:
   name
@@ -68,15 +68,18 @@ options:
 ```
 
 Corremos el proyecto usando el siguiente comando
-```
+
+```sh
 cd my-app
 ng serve --open
 ```
 
 [Referencia](https://angular.io/start)
 
-#### Actividad
+## Actividad
 
 Crear un nuevo proyecto angular con enrutamiento y hoja de estilos "scss"
 
 [Ver Respuesta](./respuestas/angular-cli.md)
+
+[<--](./README.md)

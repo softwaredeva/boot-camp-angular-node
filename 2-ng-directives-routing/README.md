@@ -25,3 +25,5 @@ Pantalla 1: Inicio - se debe mostrar un "header" con un logo, una barra para bus
 Pantalla 2: Producto: - se debe mostrar la información del producto de acuerdo al id de la ruta del producto. Se podrá agregar el producto a un carrito.
 
 ![Pantalla 1 & 2](./E-commerce-design.png)
+
+[<- README](../README.md)

@@ -1,15 +1,17 @@
-## Data binding
+# Data binding
 
 En angular utilizamos {{ variable }} (Interpolation) dentro de la sintaxis del html para que angular "renderee" el valor de una variable.
 
-```
-component.html
+```html
+<!-- component.html -->
 
    <h1>{{title}}</h1>
    <h2>My favorite food is: {{myFood}}</h2>
 
+```
 
-component.ts
+```ts
+// component.ts
 
   title: string = 'Tour of Heroes';
   myFood: string = 'Sushi';
@@ -17,37 +19,39 @@ component.ts
 
 Podemos hacer llamadas a funciones de la siguiente forma:
 
-```
+```html
 <p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}.</p>
 ```
 
 Cuando buscamos ligar una variable al valor de una propiedad de un tag html:
 
-```
+```html
 <img [src]="itemImageUrl2">
 ```
 
 Podemos acceder directamente desde el html a la instancia "typescript" de los elementos HTML usando las variables de referencia:
 
-```
+```html
 <label>Type something:
   <input #customerInput>{{customerInput.value}}
 </label>
 ```
 
 También podemos ejecutar funciones que respondan a eventos
-```
+
+```html
 <button (click)="deleteHero()">Delete hero</button>
 ```
+
 [Referencia (template-syntax)](https://angular.io/guide/template-syntax)  
 [Referencia](https://angular.io/tutorial/toh-pt1)
 
-#### Actividad
+## Actividad
 
 En nuetro archivo "app.component" agregar los elementos necesarios para que se pueda mostrar el valor de un objeto de tipo "Producto" con las propiedades: id, name, cost e image, declarado en el controlador de la vista, usando el siguiente estilo y html.
 
-```
-app.component.html
+```html
+<!-- app.component.html -->
 
 
 <div class="buttonInner">
@@ -62,8 +66,8 @@ app.component.html
 </div>
 ```
 
-```
-app.component.scss
+```scss
+// app.component.scss
 
 .buttonInner{
   display: flex;
@@ -94,3 +98,5 @@ app.component.scss
 ```
 
 [Respuesta](./respuestas/data-binding.md)
+
+[<--](./README.md)

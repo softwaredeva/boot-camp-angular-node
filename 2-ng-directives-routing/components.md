@@ -1,4 +1,4 @@
-## Components
+# Components
 
 Un componente controla una parte de nuestra pantalla llamada vista, y estos se utilizan definiendo el nombre del componente y se declara como un tag de html.
 
@@ -8,15 +8,16 @@ Además de la clase cada componente tiene una plantilla html la cuál puede y te
 
 [Referencia](https://angular.io/tutorial/toh-pt3)
 
-
-#### Actividad
+## Actividad
 
 1.- Crearemos nuestro primer componente que será una lista de productos, el cuál contendrá la lista que recién creamos, para hacer esto utilizaremos el comando en la terminal de nuestra computadora, dentro de la carpeta del proyecto creado
 
-```
+```sh
 > ng generate component components/ProductsList
 ```
 
 2.- Tenemos que cambiar el estilo del app.component al nuevo componente.
 
 [Respuesta](./respuestas/components.md)
+
+[<--](./README.md)

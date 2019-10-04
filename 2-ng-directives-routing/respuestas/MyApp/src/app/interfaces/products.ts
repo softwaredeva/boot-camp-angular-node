@@ -41,31 +41,31 @@ export const PRODUCTS: Product[] = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
-    id: '5', name: 'Producto 5', cost: 55, image: 'assets/product-5.png',
+    id: '5', name: 'Producto 5', cost: 55, image: 'http://placeimg.com/640/480/tech',
     description: ''
   },
   {
-    id: '6', name: 'Producto 6', cost: 55, image: 'assets/product-6.png',
+    id: '6', name: 'Producto 6', cost: 55, image: 'http://placeimg.com/640/480/tech',
     description: ''
   },
   {
-    id: '7', name: 'Producto 7', cost: 55, image: 'assets/product-7.png',
+    id: '7', name: 'Producto 7', cost: 55, image: 'http://placeimg.com/640/480/tech',
     description: ''
   },
   {
-    id: '8', name: 'Producto 8', cost: 55, image: 'assets/product-8.png',
+    id: '8', name: 'Producto 8', cost: 55, image: 'http://placeimg.com/640/480/tech',
     description: ''
   },
   {
-    id: '9', name: 'Producto 9', cost: 55, image: 'assets/product-9.png',
+    id: '9', name: 'Producto 9', cost: 55, image: 'http://placeimg.com/640/480/tech',
     description: ''
   },
   {
-    id: '10', name: 'Producto 10', cost: 55, image: 'assets/product-10.png',
+    id: '10', name: 'Producto 10', cost: 55, image: 'http://placeimg.com/640/480/tech',
     description: ''
   },
   {
-    id: '11', name: 'Producto 11', cost: 55, image: 'assets/product-11.png',
+    id: '11', name: 'Producto 11', cost: 55, image: 'http://placeimg.com/640/480/tech',
     description: ''
   },
 ]

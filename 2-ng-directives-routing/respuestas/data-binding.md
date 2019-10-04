@@ -1,10 +1,11 @@
-### Respuesta
+# Data binding
+
+## Respuesta
 
 Agregar o modificar los siguientes códigos y archivos al proyecto:
 
-
-```
-app.component.html
+```html
+<!-- app.component.html -->
 
 
 <div class="buttonInner">
@@ -19,8 +20,8 @@ app.component.html
 </div>
 ```
 
-```
-app.component.ts
+```ts
+// app.component.ts
 
 ...
 import { Product } from './Product';
@@ -35,8 +36,8 @@ export class AppComponent implements OnDestroy {
 }
 ```
 
-```
-Product.ts
+```ts
+// Product.ts
 
 export interface Product{
   id: string;
@@ -47,8 +48,8 @@ export interface Product{
 }
 ```
 
-```
-app.module.ts
+```ts
+<!-- app.module.ts -->
 
 import { MatIconModule } from '@angular/material';
 
@@ -61,3 +62,5 @@ import { MatIconModule } from '@angular/material';
 })
 export class AppModule { }
 ```
+
+[<--](../data-binding.md)

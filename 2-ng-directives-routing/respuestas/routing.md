@@ -1,15 +1,17 @@
-### Respuesta
+# Routing
+
+## Respuesta
 
 Agregar o modificar los siguientes códigos y archivos al proyecto:
 
-```
-app.component.html
+```html
+<!-- app.component.html -->
 
 <router-outlet></router-outlet>
 ```
 
-```
-app.module.ts
+```ts
+// app.module.ts
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -31,8 +33,8 @@ import { ProductComponent } from './views/product/product.component';
 export class AppModule { }
 ```
 
-```
-app-routing.module.ts
+```ts
+// app-routing.module.ts
 
 import { HomeComponent } from './views/home/home.component';
 import { ProductComponent } from './views/product/product.component';
@@ -45,8 +47,8 @@ const routes: Routes = [
 ];
 ```
 
-```
-views/home/home.component.ts
+```ts
+// views/home/home.component.ts
 
 
 import { Product } from '../Product';
@@ -58,15 +60,13 @@ export class HomeComponent implements OnInit {
   ...
 ```
 
-
-```
+```sh
 products.ts -> views/products.ts
 Product.ts -> views/Product.ts
 ```
 
-
-```
-components/products-list/products-list.component.html
+```html
+<!-- components/products-list/products-list.component.html -->
 
 ...
 <div class="productContainer" *ngFor="let product of products">
@@ -74,3 +74,5 @@ components/products-list/products-list.component.html
     <div class="buttonInner">
       ...
 ```
+
+[<--](../routing.md)

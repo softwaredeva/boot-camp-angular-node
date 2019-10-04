@@ -1,6 +1,6 @@
-## Angular built-in directives & pipes
+# Angular built-in directives & pipes
 
-### Directives
+## Directives
 
 Las directivas son propiedades que se definen para extender funcionalidades de elementos del DOM.
 
@@ -14,10 +14,11 @@ Angular cuenta con directiva por defecto.
 * ng-template
 * ng-container
 
-### Pipes
+## Pipes
 
 Se utilizan como "filtro" de como se debe renderiar el contenido de una variable. Se utilizan de la siguiente manera:
-```
+
+```html
 <p>The client's birthday is {{ birthday | date:"MM/dd/yy" }} </p>
 ```
 
@@ -38,12 +39,12 @@ Se utilizan como "filtro" de como se debe renderiar el contenido de una variable
 [Referencia](https://angular.io/tutorial/toh-pt1)  
 [Referencia](https://angular.io/guide/structural-directives)
 
-#### Actividad
+## Actividad
 
 1.- En el proyecto creado con "material", agregar al archivo "app.component" lo necesario para convertir nuestro producto, en una lista de productos usando "\*ngFor" y el siguiente "template".
 
-```
-app.component.html
+```html
+<!-- app.component.html -->
 
 <div class="productsListContainer">
   <div class="productContainer">
@@ -58,8 +59,8 @@ app.component.html
 </div>
 ```
 
-```
-app.component.scss
+```scss
+// app.component.scss
 
 .productsListContainer{
   display: flex;
@@ -81,8 +82,8 @@ app.component.scss
 }
 ```
 
-
 2.- Mostrar el costo de los productos con un formato adecuado.
 
-
 [Respuesta](./respuestas/ng-built-in-directives-pipes.md)
+
+[<--](./README.md)
