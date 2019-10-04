@@ -3,7 +3,7 @@ import { ChangeDetectorRef, Component, OnDestroy, ViewChild } from '@angular/cor
 import { FormControl } from '@angular/forms';
 import { MatSidenav } from '@angular/material';
 
-import { debounceTime, distinctUntilChanged, switchMap,tap, filter }from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, switchMap, tap, filter } from 'rxjs/operators';
 
 import { CheckoutService, CheckoutProduct } from './services/checkout.service';
 import { ProductsService, Product } from './services/products.service';
@@ -14,14 +14,14 @@ import { ProductsService, Product } from './services/products.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy {
-  @ViewChild('snav',{static:false}) sidenav: MatSidenav;
+  @ViewChild('snav', { static: false }) sidenav: MatSidenav;
 
   mobileQuery: MediaQueryList;
 
-  fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
+  fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
 
-  fillerContent = Array.from({length: 50}, () =>
-      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+  fillerContent = Array.from({ length: 50 }, () =>
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -46,28 +46,28 @@ export class AppComponent implements OnDestroy {
     this.mobileQuery.addListener(this._mobileQueryListener);
 
     this.searchFormControl.valueChanges.pipe(
-      filter(value=>!!value),
+      filter(value => !!value),
       debounceTime(300),
       distinctUntilChanged(),
-      tap(()=>{this.isSearching = true;this.searchComplete = false;}),
-      switchMap(value=>this.productsService.searchProducts(value)),
-    ).subscribe(results=>{
+      tap(() => { this.isSearching = true; this.searchComplete = false; }),
+      switchMap(value => this.productsService.searchProducts(value)),
+    ).subscribe(results => {
       this.searchResults = results;
       this.isSearching = false;
       this.searchComplete = true;
     });
 
-    this.checkoutService.productsObservable.subscribe((checkoutProducts:CheckoutProduct[])=>{
-      if(checkoutProducts)
-      this.checkoutProducts = Object.assign([],checkoutProducts);
+    this.checkoutService.productsObservable.subscribe((checkoutProducts: CheckoutProduct[]) => {
+      if (checkoutProducts)
+        this.checkoutProducts = Object.assign([], checkoutProducts);
     });
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.checkoutService.matSidenav = this.sidenav;
   }
 
-  searchBlur(){
+  searchBlur() {
     this.searchOpen = false;
     this.searchFormControl.setValue('');
     this.searchComplete = false;
