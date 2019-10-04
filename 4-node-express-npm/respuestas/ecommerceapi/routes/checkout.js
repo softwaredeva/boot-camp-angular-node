@@ -6,7 +6,7 @@ var fs = require('fs');
 var checkoutsDB = path.join(__dirname, '..','db','checkouts.json');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.post('/', function(req, res, next) {
   let body = req.body;
 
   fs.readFile(checkoutsDB, (err, db)=>{
