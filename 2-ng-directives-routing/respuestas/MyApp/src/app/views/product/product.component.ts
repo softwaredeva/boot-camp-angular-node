@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
-import {  Product } from '../../interfaces/Product';
+import { Product } from '../../interfaces/Product';
 
 import { PRODUCTS } from '../../interfaces/products';
 
@@ -16,16 +16,16 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-) { }
+  ) { }
 
   ngOnInit() {
-    let params: Params = this.activatedRoute.snapshot.params;
-    if(params.id){
+    const params: Params = this.activatedRoute.snapshot.params;
+    if (params.id) {
       this.productId = params.id;
       this.getProduct();
     }
     // this.activatedRoute.params.subscribe((params:Params)=>{
-    //   console.log("params",params);
+    //   console.log('params',params);
     //   if(params.id){
     //     this.productId = params.id;
     //     this.getProduct();
@@ -33,12 +33,12 @@ export class ProductComponent implements OnInit {
     // });
   }
 
-  getProduct(){
-    this.product = PRODUCTS.find(item=>item.id==this.productId);
+  getProduct() {
+    this.product = PRODUCTS.find(item => item.id === this.productId);
   }
 
-  addToCart(){
-    console.log("addToCart",this.product);
+  addToCart() {
+    console.log('addToCart', this.product);
   }
 
 }

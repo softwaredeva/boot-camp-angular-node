@@ -1,10 +1,11 @@
-### Respuesta
+# HTTP Client
+
+## Respuesta
 
 Agregar o modificar los siguientes códigos y archivos al proyecto:
 
-```
-services/products.service
-
+```ts
+// services/products.service
 
 ...
 import { HttpClient } from '@angular/common/http';
@@ -51,9 +52,8 @@ export class ProductsService {
 }
 ```
 
-
-```
-views/home/home.component
+``` ts
+// views/home/home.component
 
 
 ...
@@ -64,8 +64,8 @@ ngOnInit() {
 }
 ```
 
-```
-views/product/product.component
+```ts
+// views/product/product.component
 
 
 ...
@@ -77,3 +77,5 @@ getProduct(){
   });
 }
 ```
+
+[<--](../http-client.md)

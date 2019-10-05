@@ -1,6 +1,6 @@
-## Express Generator
+# Express Generator
 
-```
+```sh
 express -h
 
   Usage: express [options] [dir]
@@ -20,11 +20,11 @@ express -h
     -f, --force         force on non-empty directory
 ```
 
-### Actividades
+## Actividades
 
 1.- Utilizar el generador para crear un proyecto nuevo
 
-```
+```sh
 $ npm install -g express-generator
 
 $ express --no-view --git ecommerceapi
@@ -33,14 +33,20 @@ $ cd ecommerceapi
 $ npm install
 
 $ DEBUG=ecommerceapi:* npm start
+>
 ```
 
 2.- Agregar nodemon
 
-```
+```sh
 $ npm i --save-dev nodemon
+>
+```
 
-package.json
+> package.json
+
+```json
+
 
 ...
 "scripts": {
@@ -50,11 +56,10 @@ package.json
 ...
 ```
 
-
 3.- Agregar cors
 
-```
-cors.js
+```js
+// cors.js
 
 // CORS
 var cors = require('cors');
@@ -74,18 +79,17 @@ module.exports = cors(corsOptions);
 
 4.- Agregar una router con las rutas de los productos para que lea una base de datos json que tengamos almacenada.
 
-```
+```js
 fs.readFile(filePath,callback)
 
 JSON.parse(json);
 ```
 
-
 5.- Agregar la imágenes que angular puede utilizar en public
 
 6.- Agregar un router que procese el pedido y lo guarde en un json
 
-```
+```js
 JSON.stringify(string, null, 2)
 
 fs.writeFile(filePath,callback)
@@ -94,3 +98,5 @@ fs.writeFile(filePath,callback)
 9.- Agregar en la ruta de get products, la validación si existe parámetros de búsqueda para filtrar los productos
 
 8.- Agregar "handler" para 404 y errores.
+
+[<--](./README.md)

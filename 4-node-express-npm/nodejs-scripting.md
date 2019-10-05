@@ -1,6 +1,6 @@
-### NodeJS scripting
+# NodeJS scripting
 
-#### Actividades
+## Actividades
 
 1.- Primer código de javascript - Crear un código que tome n y m como argumentos y haga una suma de todos los argumentos que se ingresen en el proceso.
 
@@ -18,17 +18,15 @@
 
 Tu programa deberá imprimir el contenido de cada una de las URLs en consola en el mismo orden que fueron recibidos los argumentos. No deberás imprimir el largo, solo el contenido como String, pero debes respetar el orden de llegada de los argumentos.
 
-
-
 8.- Servidor - crear un servidor que escuche conexiones TCP en el puerto indicado por el primer argumento del programa. Para cada conexión debes escribir la fecha actual y la hora en formato 24hs del siguiente modo:
 
-```
+```js
 "AAAA-MM-DD hh:mm"
 ```
 
 seguido por un carácter **newline**('\n'). Tanto el mes, el día como la hora y minuto deben tener un 0 para ocupar 2 espacios, por ejemplo:
 
-```
+```js
 "2013-07-06 17:42"
 ```
 
@@ -56,8 +54,10 @@ Luego, agrega un segundo endpoint con ruta '/api/unixtime' que reciba los mismos
 
 ```json
 {
-	"unixtime": 1376136615474
+  "unixtime": 1376136615474
 }
 ```
 
 El servidor deberá escuchar en un puerto cuyo número será el primer argumento del programa.
+
+[<--](./README.md)

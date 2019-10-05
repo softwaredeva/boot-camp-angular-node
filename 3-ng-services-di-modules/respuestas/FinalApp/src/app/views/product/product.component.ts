@@ -14,35 +14,37 @@ export class ProductComponent implements OnInit {
   productId: string;
   product: Product;
 
-  addCountControl: FormControl = new FormControl(0,[Validators.required,Validators.min(1)]);
+  addCountControl: FormControl = new FormControl(0, [Validators.required, Validators.min(1)]);
   constructor(
     private activatedRoute: ActivatedRoute,
     private productsService: ProductsService,
     private checkoutService: CheckoutService,
-) { }
+  ) { }
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe((params:Params)=>{
-      if(params.id){
+    this.activatedRoute.params.subscribe((params: Params) => {
+      if (params.id) {
         this.productId = params.id;
         this.getProduct();
       }
     });
-    this.addCountControl.valueChanges.subscribe(value=>{
-      if(parseInt(value)<0)
-      this.addCountControl.setValue(0);
+    this.addCountControl.valueChanges.subscribe(value => {
+      if (parseInt(value, 10) < 0) {
+        this.addCountControl.setValue(0);
+      }
     });
   }
 
-  getProduct(){
-    this.productsService.getProduct(this.productId).subscribe(data=>{
-      if(data)
-      this.product = data;
+  getProduct() {
+    this.productsService.getProduct(this.productId).subscribe(data => {
+      if (data) {
+        this.product = data;
+      }
     });
   }
 
-  addToCart(){
-    this.checkoutService.addToCart(this.product,this.addCountControl.value);
+  addToCart() {
+    this.checkoutService.addToCart(this.product, this.addCountControl.value);
   }
 
 }

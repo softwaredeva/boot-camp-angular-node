@@ -14,6 +14,6 @@ export class InMemoryDataService implements InMemoryDbService {
   }
 
   genId(products: Product[]): string {
-    return products.length > 0 ? (Math.max(...products.map(product => parseInt(product.id))) + 1).toString() : '11';
+    return products.length > 0 ? (Math.max(...products.map(product => parseInt(product.id, 10))) + 1).toString() : '11';
   }
 }

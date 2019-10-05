@@ -6,12 +6,12 @@
 * Services [->](./services.md)
 * HttpClient [->](./http-client.md)
 
-* ReactiveForms [->](.reactive-forms.md)
+* ReactiveForms [->](./reactive-forms.md)
 
-* e-commerce [->](.e-commerce.md)
+* e-commerce [->](./e-commerce.md)
 
 * CLI build [->](./cli-build.md)
-* Extras:
+* Extras: [->](./extras.md)
   * Animations
   * Custom directives & pipes
 

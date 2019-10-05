@@ -1,10 +1,10 @@
-## HttpClient
+# HttpClient
 
 Es el mecanismo de angular para comunicarse con servidores remotos utilizando HTTP.
 
 Se debe importar en el "app.module":
 
-```
+```ts
 @NgModule({
   imports: [
     HttpClientModule,
@@ -14,16 +14,16 @@ Se debe importar en el "app.module":
 
 [Referencia](https://angular.io/tutorial/toh-pt4)
 
-#### Actividad
+## Actividad
 
 1.- Simular un servidor de datos para poder probar nuestro HttpClient
 
-```
+```sh
 > npm i -s angular-in-memory-web-api
+```
 
-
-
-app.module.ts
+```ts
+// app.module.ts
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
@@ -38,14 +38,14 @@ NgModule({
   ],
 })
 ...
+```
 
+```sh
+> ng generate service InMemoryData
+```
 
-
->ng generate service InMemoryData
-
-
-
-in-memory-data.service.ts
+```ts
+// in-memory-data.service.ts
 
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Product } from './products.service';
@@ -71,3 +71,5 @@ export class InMemoryDataService implements InMemoryDbService {
 2.- Modificar los métodos de "product.service" para hacer una llamada al servidor en lugar de buscar en las constantes.
 
 [Respuesta](./respuestas/http-client.md)
+
+[<--](./README.md)

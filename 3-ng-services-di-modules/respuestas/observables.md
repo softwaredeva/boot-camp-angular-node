@@ -1,10 +1,11 @@
-### Respuesta
+# Observables
+
+## Respuesta
 
 Agregar o modificar los siguientes códigos y archivos al proyecto:
 
-
-```
-app.component
+```ts
+// app.component
 
 constructor(
   ...
@@ -23,8 +24,8 @@ constructor(
 }
 ```
 
-```
-views/product/product.component
+```ts
+// views/product/product.component
 
 ngOnInit() {
   this.activatedRoute.params.subscribe((params:Params)=>{
@@ -36,3 +37,5 @@ ngOnInit() {
   });
 }
 ```
+
+[<--](../observables.md)

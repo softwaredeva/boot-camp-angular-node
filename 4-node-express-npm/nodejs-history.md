@@ -1,5 +1,4 @@
-### NodeJS history & V8
-
+# NodeJS history & V8
 
 NodeJS nació para resolver un problema en específico, manejar múltiples llamadas http de usuarios de forma asíncrona, sin bloquear el sistema en un solo hilo, a diferencia de los modelos más comunes usados que están basado en el uso de muchos hilos, donde cada hilo maneja una llamada y estos hilos son conocidos por la saturación de la memoria al tener que hacer una copia del proceso original en el nuevo hilo para poder ejecutarlo.
 
@@ -9,3 +8,5 @@ Su funcionamiento se basa en algo llamado el "event loop" el cuál se ejecuta de
 
 [Referencia](https://nodejs.org/en/about/)  
 [API DOCS](https://nodejs.org/api/)
+
+[<--](./README.md)

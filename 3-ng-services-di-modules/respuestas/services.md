@@ -1,10 +1,11 @@
-### Respuesta
+# Services
+
+## Respuesta
 
 Agregar o modificar los siguientes códigos y archivos al proyecto:
 
-
-```
-services/products.service
+```ts
+// services/products.service
 
 
 import { Injectable } from '@angular/core';
@@ -33,10 +34,8 @@ getProduct(productId) {
 }
 ```
 
-
-
-```
-views/home/home.component
+```ts
+// views/home/home.component
 
 ..
 import { ProductsService, Product } from '../../services/products.service';
@@ -52,8 +51,8 @@ ngOnInit() {
 }
 ```
 
-```
-views/product/product.component
+```ts
+// views/product/product.component
 
 
 constructor(
@@ -67,3 +66,5 @@ getProduct(){
   this.product = this.productsService.getProduct(this.productId);
 }
 ```
+
+[<--](../observables.md)

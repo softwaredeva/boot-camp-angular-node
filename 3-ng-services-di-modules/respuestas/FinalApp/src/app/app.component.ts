@@ -1,5 +1,5 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, OnDestroy, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, AfterViewInit, OnDestroy, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatSidenav } from '@angular/material';
 
@@ -13,7 +13,7 @@ import { ProductsService, Product } from './services/products.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent implements AfterViewInit, OnDestroy {
   @ViewChild('snav', { static: false }) sidenav: MatSidenav;
 
   mobileQuery: MediaQueryList;
@@ -27,7 +27,7 @@ export class AppComponent implements OnDestroy {
        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`);
 
-  private _mobileQueryListener: () => void;
+  private mobileQueryListener: () => void;
 
   checkoutProducts: CheckoutProduct[];
 
@@ -35,15 +35,15 @@ export class AppComponent implements OnDestroy {
   searchResults: Product[];
   isSearching: boolean;
   searchComplete: boolean;
-  searchOpen: boolean = false;
+  searchOpen = false;
   constructor(
     changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,
     private checkoutService: CheckoutService,
     private productsService: ProductsService,
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
+    this.mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this.mobileQueryListener);
 
     this.searchFormControl.valueChanges.pipe(
       filter(value => !!value),
@@ -58,8 +58,9 @@ export class AppComponent implements OnDestroy {
     });
 
     this.checkoutService.productsObservable.subscribe((checkoutProducts: CheckoutProduct[]) => {
-      if (checkoutProducts)
+      if (checkoutProducts) {
         this.checkoutProducts = Object.assign([], checkoutProducts);
+      }
     });
   }
 
@@ -75,6 +76,6 @@ export class AppComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.mobileQuery.removeListener(this.mobileQueryListener);
   }
 }

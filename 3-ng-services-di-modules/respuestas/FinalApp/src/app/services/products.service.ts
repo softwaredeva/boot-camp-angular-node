@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
-export interface Product{
+export interface Product {
   id: string;
   name: string;
   cost: number;
@@ -22,7 +22,7 @@ export class ProductsService {
     private httpClient: HttpClient,
   ) { }
 
-  getProducts (): Observable<Product[]> {
+  getProducts(): Observable<Product[]> {
     return this.httpClient.get<Product[]>(this.productsUrl)
       .pipe(
         tap(_ => this.log('fetched products')),
@@ -49,7 +49,7 @@ export class ProductsService {
     );
   }
 
-  private handleError<T> (operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
       this.log(`${operation} failed: ${error.message}`);
@@ -58,6 +58,6 @@ export class ProductsService {
   }
 
   private log(message: string) {
-    console.log("log",message);
+    console.log('log', message);
   }
 }

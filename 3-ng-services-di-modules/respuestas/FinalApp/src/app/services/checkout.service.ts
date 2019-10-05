@@ -7,11 +7,11 @@ import { catchError, tap } from 'rxjs/operators';
 
 import { Product } from './products.service';
 
-export interface CheckoutProduct extends Product{
+export interface CheckoutProduct extends Product {
   quantity: number;
 }
 
-export interface CheckoutData{
+export interface CheckoutData {
   customerData: {
     name: string;
     email: string;
@@ -40,16 +40,17 @@ export class CheckoutService {
     private httpClient: HttpClient,
   ) { }
 
-  addToCart(product,quantity){
-    let checkoutProduct: CheckoutProduct = Object.assign({},product,{quantity:quantity});
+  addToCart(product, quantity) {
+    const checkoutProduct: CheckoutProduct = Object.assign({}, product, {quantity}); // Abbreviation = {quantity: quantity}
     this.products.push(checkoutProduct);
     this.productsSubject.next(this.products);
 
-    if(this.matSidenav)
-    this.matSidenav.open();
+    if (this.matSidenav) {
+      this.matSidenav.open();
+    }
   }
 
-  sendNewCheckout(checkoutData: CheckoutData){
+  sendNewCheckout(checkoutData: CheckoutData) {
     const url = `${this.checkoutUrl}`;
     return this.httpClient.post<Product>(url, checkoutData).pipe(
       tap(_ => this.log(`sended Checkout`)),
@@ -57,7 +58,7 @@ export class CheckoutService {
     );
   }
 
-  private handleError<T> (operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
       this.log(`${operation} failed: ${error.message}`);
@@ -66,6 +67,6 @@ export class CheckoutService {
   }
 
   private log(message: string) {
-    console.log("log",message);
+    console.log('log', message);
   }
 }

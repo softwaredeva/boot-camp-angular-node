@@ -1,3 +1,7 @@
+# E Commerce
+
+## Actividades
+
 1.- Agregar al pipe de searchControl en app.component.ts un "switchMap" y una función del servicio que regrese la llamada al servidor.
 
 2.- Crear componente carrito para el menú
@@ -21,3 +25,5 @@ Extras
 8.- Modificar la cantidad del producto desde la pantalla de producto
 
 9.- Validar si el producto ya existe en el carrito
+
+[<--](./README.md)

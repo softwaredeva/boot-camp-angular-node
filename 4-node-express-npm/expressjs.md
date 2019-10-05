@@ -1,4 +1,4 @@
-## ExpressJS
+# ExpressJS
 
 Express es un framework de desarrollo para NodeJS minimalístico y rápido.
 
@@ -6,12 +6,11 @@ Implementan el concepto de middleware para la facilidad de cración de APIs (End
 
 Otros frameworks de desarrollo utilizan como base Express
 
-
-### Actividades
+## Actividades
 
 1.- Escribir un código "hola mundo" con express para que responda a la ruta '/'.
 
-```
+```js
 const express = require('express');
 const app = express();
 const port = process.argv[2] || 3000;
@@ -23,12 +22,14 @@ app.listen(port, funcionCallback);
 
 2.- Utilizar la siguiente estructura para declarar 4 rutas con diferentes métodos que solo respondan que método se está utilizando.
 
-```
+```js
 app.METHOD(PATH, CALLBACK)
 ```
 
 3.- Servir una carpeta con archivos estáticos
 
-```
+```js
 express.static(root, [options])
 ```
+
+[<--](./README.md)

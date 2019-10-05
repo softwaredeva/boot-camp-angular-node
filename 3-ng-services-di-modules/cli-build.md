@@ -1,12 +1,11 @@
-## CLI build
+# CLI build
 
 Una vez que logramos programar nuestra página web, tendremos que "compilar" nuestra aplicación para poderla servir en un servidor. Para esto se utilizan variables de configuración de ambiente las cuales pueden ser configuradas desde /src/environments/..., aquí tendremos dos archivos para poder tener variables de cofniguración que solo hagan referencia al momento de desarrollo y variables para el ambiente de producción.
 
 Para compilar nuestra aplicación en modo producción utilizamos el siguiente comando:
 
-```
+```sh
 > ng build
-
 
 > ng build --help
 Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.
@@ -37,9 +36,10 @@ options:
     By default, the production target is set up in the workspace configuration such that all builds make use of bundling, limited tree-shaking, and also limited dead code elimination.
 ```
 
-### AOT vs JIT
+## AOT vs JIT
 
 Las principales diferencias entre JIT y AOT en Angular son:
+
 * El tiempo que tarda en compilar
 * El lugar donde se va a compilar
 
@@ -66,7 +66,6 @@ Una ves que se desplego la aplicación y el usuario abre su explorador, la pági
 * Entra en el proceso de compilación JIT,  donde se genera el js de cada componente
 * La aplicación se renderiza
 
-
 Flujo de eventos con compilación "Ahead-Of-Time"
 
 En contraste con lo anterior, con AoT, se deben seguir estos pasos:
@@ -87,5 +86,6 @@ A pesar de que el proceso anterior parece ligeramente más complicado, el usuari
 
 Como se puede observar el tercer paso no está presente por lo que mejor el "UX"
 
-
 [Referencia](https://medium.com/@jitubutwal144/basic-overview-of-just-in-time-jit-vs-ahead-of-time-aot-compilation-in-angular-applications-d24f04d8f7ca)
+
+[<--](./README.md)
