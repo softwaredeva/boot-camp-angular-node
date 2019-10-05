@@ -4,7 +4,7 @@
 
 Es recomendable que los asistentes tengan conocimientos básicos de programación, así como nociones de desarrollo web. A continuación una lista de los temas de conocimiento esperados (nivel básico):
 
-### Conocimientos
+### Conocimientos
 
 * HTML & CSS [APRENDER ->](https://www.w3schools.com)
 * Javascript (browser) [APRENDER ->](https://www.w3schools.com/js/default.asp)

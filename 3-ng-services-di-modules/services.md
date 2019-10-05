@@ -9,7 +9,8 @@ Estos servicios se deben "injectar" a los componentes a través del constructor.
 Podemos generar estos servicios utilizando el siguiente comando.
 
 ```sh
-ng g service services/MyService
+$ ng g service services/MyService
+>
 ```
 
 [Referencia](https://angular.io/tutorial/toh-pt4)

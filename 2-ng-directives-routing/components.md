@@ -13,7 +13,8 @@ Además de la clase cada componente tiene una plantilla html la cuál puede y te
 1.- Crearemos nuestro primer componente que será una lista de productos, el cuál contendrá la lista que recién creamos, para hacer esto utilizaremos el comando en la terminal de nuestra computadora, dentro de la carpeta del proyecto creado
 
 ```sh
-> ng generate component components/ProductsList
+$ ng generate component components/ProductsList
+>
 ```
 
 2.- Tenemos que cambiar el estilo del app.component al nuevo componente.

@@ -3,7 +3,8 @@
 Instalar:
 
 ```sh
-> ng add @angular/material
+$ ng add @angular/material
+>
 ```
 
 Importar cada uno de los módulos de los componentes que se quieran usar en el respectivo "module":

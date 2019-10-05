@@ -5,9 +5,9 @@ Una vez que logramos programar nuestra página web, tendremos que "compilar" nue
 Para compilar nuestra aplicación en modo producción utilizamos el siguiente comando:
 
 ```sh
-> ng build
+$ ng build
 
-> ng build --help
+$ ng build --help
 Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.
 usage: ng build <project> [options]
 

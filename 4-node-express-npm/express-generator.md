@@ -1,7 +1,7 @@
 # Express Generator
 
 ```sh
-express -h
+$ express -h
 
   Usage: express [options] [dir]
 
@@ -46,8 +46,6 @@ $ npm i --save-dev nodemon
 > package.json
 
 ```json
-
-
 ...
 "scripts": {
   "start": "node ./bin/www",

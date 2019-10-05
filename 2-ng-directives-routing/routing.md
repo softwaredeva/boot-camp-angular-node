@@ -7,7 +7,8 @@ Las rutas pueden tener **parámetros** los cuáles nos permitirán personalizar 
 Si nuestro proyecto no cuenta de inicio con un módulo de enrutamiento lo podemos agregar usando el siguiente comando.
 
 ```sh
-> ng generate module app-routing --flat --module=app
+$ ng generate module app-routing --flat --module=app
+>
 ```
 
 Cada ruta se define dentro de este módulo de la siguiente manera:
@@ -59,9 +60,10 @@ navigateToLogin() {
 1.- Crear dos componentes con sus respectivas rutas llamados "Home" y "Product", la ruta de "producto" deberá recibir como parámetro el id del producto
 
 ```sh
-> ng generate component views/Home
-
-> ng generate component views/Product
+$ ng generate component views/Home
+>
+$ ng generate component views/Product
+>
 ```
 
 2.- Cambiar la lista de productos que tenemos creada al componente "Home" utilizando un div como contenedor y el siguiente estilo.

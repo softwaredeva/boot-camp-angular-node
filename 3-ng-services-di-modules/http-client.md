@@ -19,7 +19,8 @@ Se debe importar en el "app.module":
 1.- Simular un servidor de datos para poder probar nuestro HttpClient
 
 ```sh
-> npm i -s angular-in-memory-web-api
+$ npm i -s angular-in-memory-web-api
+>
 ```
 
 ```ts
@@ -41,7 +42,8 @@ NgModule({
 ```
 
 ```sh
-> ng generate service InMemoryData
+$ ng generate service InMemoryData
+>
 ```
 
 ```ts
