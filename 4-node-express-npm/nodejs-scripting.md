@@ -1,6 +1,6 @@
 # NodeJS scripting
 
-## Actividades
+## Actividades
 
 1.- Primer código de javascript - Crear un código que tome n y m como argumentos y haga una suma de todos los argumentos que se ingresen en el proceso.
 
