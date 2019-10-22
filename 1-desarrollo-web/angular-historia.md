@@ -21,6 +21,10 @@ una single-page-application (SPA).
 Una de las principales partes de Angular es la creación de componentes personalizados
 los cuáles se vuelven "tags" html con su propia funcionalidad.
 
+## Inyección de dependencias
+
+Estos frameworks implementan el patrón de diseño singleton para servicios que pueden ser usado a través de otros elementos de la aplicación.
+
 ## Angular2+
 
 Se reescribió AngularJS ya que resultaba difícil de comprender para los
